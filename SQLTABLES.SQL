@@ -9,7 +9,7 @@ CREATE TABLE track
 
 CREATE TABLE album
 (
-    id AUTO_INCREMENT,
+    id INT PRIMARY KEY NOT NULL,
     title VARCHAR(255),
     genre VARCHAR(255),
     picture VARCHAR(255),
@@ -19,3 +19,10 @@ CREATE TABLE album
 SELECT *
 FROM track
 INNER JOIN album ON track.id = album.id;
+
+CREATE TABLE user
+(
+    id INT PRIMARY KEY NOT NULL,
+    userName VARCHAR(255),
+    hashedPassword VARCHAR (255)
+)
