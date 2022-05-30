@@ -1,4 +1,4 @@
-const {getTrack} = require('albums_models')
+const {getTrack} = require('./albums/albums_models')
 
 
 class tracksMiddlewares {

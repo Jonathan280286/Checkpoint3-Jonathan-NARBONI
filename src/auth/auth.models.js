@@ -1,12 +1,11 @@
-const UsersModels = require('../../users/models/users.models')
-const DbConfig = require('../../dbConfig')
+const DbConfig = require('../../database.js')
 const db = DbConfig.connection
 
 class AuthModels {
-    async getUserHash(email) {
+    async getUserHash(userName) {
         try {
-            const mySql = 'SELECT * FROM user WHERE email = ?'
-            const result = await db.promise().query(mySql, [email])
+            const mySql = 'SELECT * FROM user WHERE userName = ?'
+            const result = await db.promise().query(mySql, [userName])
             return result[0][0].password
         }
         catch(error) {

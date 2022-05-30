@@ -8,14 +8,14 @@ app.use(cookieParser())
 
 // routes import
 
-const tracksRouter = require('./src/tasks/tracks_routes.js')
-const albumsRouter = require('./src/projects/albums_routes.js')
-const authRouter = require('./src/auth/auth.routes')
+const tracksRouter = require('./tracks/tracks_routes.js')
+const albumsRouter = require('./albums/albums_routes.js')
+const authRouter = require('./auth/auth.routes')
 
 
-app.use('/api/albums', albumsRouter)
-app.use('/api/tracks', tracksRouter)
-app.use('/api/auth', authRouter)
+app.use('/api/albums/albums_routes.js', albumsRouter)
+app.use('/api/tracks/tracks_routes.js', tracksRouter)
+app.use('/api/auth/auth.routes.js', authRouter)
 
 app.listen(PORT, (err) => {
   // eslint-disable-next-line no-console
